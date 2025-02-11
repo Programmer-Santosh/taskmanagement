@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, rgb(247, 38, 194), rgb(130, 62, 240));
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parent {
+  width: 60vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(79, 81, 82, 0.2);
+  border-radius: 10px;
+}
+.taskInput {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  position: relative;
+  margin-top: 60px;
+}
+#addTask {
+  width: 80%;
+  height: 40px;
+  padding-left: 20px;
+  border: none;
+  border-radius: 10px;
+}
+.taskInput > label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.taskInput > input:focus {
+  outline: none;
+}
+
+.taskInputNotEmpty > label {
+  top: -30px;
+  left: 0;
+  color: skyblue;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.taskInput > input:focus ~ label {
+  top: -30px;
+  left: 0;
+  color: skyblue;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+#addBtn {
+  width: 10%;
+  height: 40px;
+  border-radius: 10px;
+
+  color: white;
+  border: none;
+}
+
+.btnDisabled {
+  background-color: gray;
+}
+.btnActive {
+  background-color: skyblue;
+}
+
+.tasksDisplay{
+    width: 90%;
+    min-height: 200px;
+    max-height: 45vh;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    overflow-y: scroll;
+  
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.output{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color:white;
+    padding: 10px 10px;
+    border-radius: 10px;
+    color: black;
+}
+.delete{
+    color: red;
+    height:40px;
+    width: 60px;
+    background-color: rgba(132, 192, 216,0.5);
+    padding:20px;
+    border-radius: 5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.deletePopup{
+    position: absolute;
+    top: 40vh;
+    right: 50vw;
+    background-color: white;
+    height: 100px;
+    width: 300px;
+}
+.box{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:20px;
+}
+
+.btns{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.btns>button{
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+}
+.btns>button:hover{
+    background-color: skyblue;
+}
+.hidden{
+    display: none;
+}
+.show{
+    display: static;
+}
+#deleteBtn{
+    width: 60px;
+    height:20px;
+}
