@@ -14,6 +14,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+.container2{
+ 
+    width: 100vw;
+    display: flex;
+    align-items: center;
+   
+  
+}
 .parent {
   width: 60vw;
   min-height: 60vh;
@@ -81,7 +89,7 @@ body {
   background-color: skyblue;
 }
 
-.tasksDisplay{
+.td{
     width: 90%;
     min-height: 200px;
     max-height: 45vh;
@@ -92,6 +100,18 @@ body {
   
     margin-top: 50px;
     margin-bottom: 20px;
+}
+.taskDisplayAll{
+  width: 90%;
+  min-height: 200px;
+ 
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+ 
+
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 .output{
     width: 100%;
@@ -118,9 +138,11 @@ body {
     position: absolute;
     top: 40vh;
     right: 50vw;
-    background-color: white;
+    background-color:black;
+    color:white;
     height: 100px;
     width: 300px;
+    border-radius: 10px;
 }
 .box{
     width:100%;
@@ -128,6 +150,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top:20px;
+   
 }
 
 .btns{
@@ -155,3 +178,4 @@ body {
     width: 60px;
     height:20px;
 }
+

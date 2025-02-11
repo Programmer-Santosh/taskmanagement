@@ -21,35 +21,37 @@ const previewTasks = document.querySelector(".tasksDisplay");
 const inputvalue = document.querySelector(".taskInput input");
 
 button.addEventListener("click", () => {
- 
-    if (addBtn.classList.contains("btnActive")) {
-      previewTasks.innerHTML += ` <div class="output">
+  if (addBtn.classList.contains("btnActive")) {
+    previewTasks.innerHTML += ` <div class="output">
       <div class="taskOutput">${inputvalue.value}</div>
-      <div class="delete" id="deleteBtn">
+      <button onclick="deleteF()" class="delete" id="deleteBtn">
         <i class="fa fa-trash" ></i>
-      </div>
+      </button>
     </div>`;
-    } else {
-      console.log("btn is not activated");
-    }
+  } else {
+    console.log("btn is not activated");
+  }
 });
 
-const deleteBtns = document.querySelectorAll(".delete");
-deleteBtns.forEach((btn)=>{
-  btn.addEventListener('click',()=>{
-    console.log("delete btn clicked");
-    this.parentNode.remove();
-  })
-})
-
-
-
-const tasks = document.querySelectorAll(".output");
-
-tasks.forEach((task)=>{
-    task.addEventListener('click', ()=>{
-        
-        console.log("CLICKED");
-
-    })
-})
+const popup = document.querySelector(".deletePopup");
+function deleteF() {
+  const deleteBtns = document.querySelectorAll("#deleteBtn");
+  deleteBtns.forEach((btn) => {
+    btn.onclick = function () {
+      popup.classList.add("show");
+      popup.classList.remove("hidden");
+      const yesBtn = document.getElementById("yesBtn");
+      yesBtn.onclick = function () {
+        btn.parentNode.remove();
+        popup.classList.add("hidden");
+        popup.classList.remove("show");
+      };
+      const noBtn = document.getElementById("noBtn");
+      noBtn.onclick = function () {
+        popup.classList.add("hidden");
+        popup.classList.remove("show");
+        return;
+      };
+    };
+  });
+}

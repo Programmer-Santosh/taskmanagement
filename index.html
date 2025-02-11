@@ -15,27 +15,25 @@
   </head>
   <body>
     <div class="container">
-      <div class="parent ">
+      <div class="parent">
         <div class="taskInput">
           <input id="addTask" name="addTask" />
           <label for="addTask">Enter Task</label>
           <button class="addBtn btnDisabled" id="addBtn">Add</button>
         </div>
-        <div class="tasksDisplay" id="tasksDisplay">
-       
+
+        <div class="tasksDisplay td" id="tasksDisplay"></div>
+      </div>
+    </div>
+    <div class="deletePopup hidden">
+      <div class="box">
+        <h3 class="alert">Are you Sure to delete this Task</h3>
+        <div class="btns">
+          <button id="yesBtn">Yes</button>
+          <button id="noBtn">No</button>
         </div>
       </div>
     </div>
-    <div class="deletePopup hidden ">
-        <div class="box">
-            <h3 class="alert">Are you Sure to delete this Task</h3>
-            <div class="btns">
-                <button id="yesBtn">Yes</button>
-                <button id="noBtn">No</button>
-            </div>
-        </div>
-    </div>
-  
 
     <script src="./script.js"></script>
   </body>
